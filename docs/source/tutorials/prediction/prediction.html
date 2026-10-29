@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.8.26">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>gdalcubes {{}} – prediction</title>
+<title>prediction – gdalcubes {{&lt; var GDALCUBES_VERSION &gt;}}</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -63,21 +64,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../source/tutorials/videos.html" rel="next">
 <link href="../../../source/tutorials/vignettes/gc03_ML_training_data.html" rel="prev">
 <link href="../../../favicon.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-0605bf649174858f3e5e981d4a98808c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap-8fd32043eb913d5eecd3a5fd894d854f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -86,99 +94,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script><link rel="stylesheet" href="../../../styles.css">
 </head>
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../source/gdalcubes_logo_mini.png" alt="" class="navbar-logo"></a>
+    <img src="../../../source/gdalcubes_logo_mini.png" alt="" class="navbar-logo light-content"><img src="../../../source/gdalcubes_logo_mini.png" alt="" class="navbar-logo dark-content"></a>
     <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">gdalcubes 0.7.0</span>
+    <span class="navbar-title">gdalcubes 0.7.6</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../../source/getstarted.html" rel="" target="">
- <span class="menu-text">Get started</span></a>
+    <a class="nav-link" href="../../../source/getstarted.html"> 
+<span class="menu-text">Get started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../source/introduction/why.html" rel="" target="">
- <span class="menu-text">Overview</span></a>
+    <a class="nav-link" href="../../../source/introduction/why.html"> 
+<span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../source/tutorials/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Tutorials</span></a>
+    <a class="nav-link active" href="../../../source/tutorials/index.html" aria-current="page"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../source/reference/index.html" rel="" target="">
- <span class="menu-text">Reference</span></a>
+    <a class="nav-link" href="../../../source/reference/index.html"> 
+<span class="menu-text">Reference</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Help</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-help">
 <li>
-    <a class="dropdown-item" href="https://github.com/appelmar/gdalcubes_R" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="dropdown-item" href="https://github.com/appelmar/gdalcubes_R"><i class="bi bi-github" role="img">
 </i> 
  <span class="dropdown-text">Source code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/appelmar/gdalcubes_R/issues" rel="" target=""><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/appelmar/gdalcubes_R/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Report an issue</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../source/introduction/faq.html" rel="" target=""><i class="bi bi-question-circle" role="img">
+    <a class="dropdown-item" href="../../../source/introduction/faq.html"><i class="bi bi-question-circle" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../source/about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../../source/about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
 <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/appelmar/gdalcubes_R" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/appelmar/gdalcubes_R"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html">Machine learning on data cubes</a></li><li class="breadcrumb-item"><a href="../../../source/tutorials/prediction/prediction.html">2. Model prediction on data cubes</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html">Machine learning on data cubes</a></li><li class="breadcrumb-item"><a href="../../../source/tutorials/prediction/prediction.html">2. Model prediction on data cubes</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -188,9 +197,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Get started</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -211,9 +220,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">User-defined functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -228,9 +237,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Cloud data access</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -245,9 +254,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Machine learning on data cubes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -274,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
@@ -295,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div><section id="model-prediction-on-data-cubes" class="level1"><h1>Model prediction on data cubes</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html">Machine learning on data cubes</a></li><li class="breadcrumb-item"><a href="../../../source/tutorials/prediction/prediction.html">2. Model prediction on data cubes</a></li></ol></nav><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div><section id="model-prediction-on-data-cubes" class="level1"><h1>Model prediction on data cubes</h1>
 <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This tutorial demonstrates how data cubes can be used in a typical machine learning workflow from the extraction of training data to applying a trained model. We will start with labeled polygons, extract predictor variables from a cube, train a model, and finally apply the model to the full data cube to generate a time series of simple land cover predictions. To lower execution and data download times, the considered dataset and model are rather small.</p>
 <p><em>Notice that the extraction of training data from data cubes is also covered in a <a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html">separate in-depth tutorial</a>.</em></p>
@@ -317,45 +326,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="creation-of-a-training-dataset" class="level2"><h2 class="anchored" data-anchor-id="creation-of-a-training-dataset">Creation of a training dataset</h2>
 <p>As a first step, we need to download our labeled polygons.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>## Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE</code></pre>
+<pre><code>## Linking to GEOS 3.14.1, GDAL 3.12.2, PROJ 9.7.1; sf_use_s2() is TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>training_sites <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"https://hs-bochum.sciebo.de/s/3qna9TDZIdgFRhr/download"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">plot</span>(training_sites, <span class="at">axes =</span> <span class="cn">TRUE</span>, <span class="at">key.pos =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>training_sites <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"https://hs-bochum.sciebo.de/s/3qna9TDZIdgFRhr/download"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>## Warning in CPL_read_ogr(dsn, layer, query, as.character(options), quiet, : GDAL
+## Message 1: File /vsimem/.#!HIDDEN!#./1/_gdal_http_download has GPKG
+## application_id, but non conformant file extension</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">plot</span>(training_sites, <span class="at">axes =</span> <span class="cn">TRUE</span>, <span class="at">key.pos =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="prediction_files/figure-html/training_sites-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="prediction_files/figure-html/training_sites-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The dataset contains polygons and labels for land cover classes “agriculture”, “forest”, “urban”, “water”. As our area of interest, we use the extent of the polygon dataset and look for (cloud-free) Sentinel-2 images in July, 2021. To find corresponding images on AWS, we use the <a href="https://cran.r-project.org/package=rstac"><code>rstac</code> package</a> and query from the Sentinel-2 cloud-optimized GeoTIFF collection.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>bbox <span class="ot">=</span> <span class="fu">st_bbox</span>(training_sites) </span>
-<span id="cb4-2"><a href="#cb4-2"></a>bbox</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>bbox <span class="ot">=</span> <span class="fu">st_bbox</span>(training_sites) </span>
+<span id="cb6-2"><a href="#cb6-2"></a>bbox</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>##      xmin      ymin      xmax      ymax 
 ##  7.576647 51.874603  7.673467 51.977592</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(rstac)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>s <span class="ot">=</span> <span class="fu">stac</span>(<span class="st">"https://earth-search.aws.element84.com/v0"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a>  items <span class="ot">=</span> s <span class="sc">|&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="fu">stac_search</span>(<span class="at">collections =</span> <span class="st">"sentinel-s2-l2a-cogs"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5"></a>                <span class="at">bbox =</span> <span class="fu">c</span>(bbox[<span class="st">"xmin"</span>],bbox[<span class="st">"ymin"</span>],</span>
-<span id="cb6-6"><a href="#cb6-6"></a>                         bbox[<span class="st">"xmax"</span>],bbox[<span class="st">"ymax"</span>]), </span>
-<span id="cb6-7"><a href="#cb6-7"></a>                <span class="at">datetime =</span> <span class="st">"2021-07-01/2021-07-31"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="fu">post_request</span>() <span class="sc">|&gt;</span> <span class="fu">items_fetch</span>(<span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">length</span>(items<span class="sc">$</span>features)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(rstac)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>s <span class="ot">=</span> <span class="fu">stac</span>(<span class="st">"https://earth-search.aws.element84.com/v0"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  items <span class="ot">=</span> s <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="fu">stac_search</span>(<span class="at">collections =</span> <span class="st">"sentinel-s2-l2a-cogs"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>                <span class="at">bbox =</span> <span class="fu">c</span>(bbox[<span class="st">"xmin"</span>],bbox[<span class="st">"ymin"</span>],</span>
+<span id="cb8-6"><a href="#cb8-6"></a>                         bbox[<span class="st">"xmax"</span>],bbox[<span class="st">"ymax"</span>]), </span>
+<span id="cb8-7"><a href="#cb8-7"></a>                <span class="at">datetime =</span> <span class="st">"2021-07-01/2021-07-31"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="fu">post_request</span>() <span class="sc">|&gt;</span> <span class="fu">items_fetch</span>(<span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-9"><a href="#cb8-9"></a>  <span class="fu">length</span>(items<span class="sc">$</span>features)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## [1] 26</code></pre>
 </div>
 </div>
 <p>To filter by cloud coverage and create a gdalcubes image collection object, we apply <code>stac_image_collection()</code> on the resulting list of 26 images.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(gdalcubes)</span>
-<span id="cb8-2"><a href="#cb8-2"></a>s2_collection <span class="ot">=</span> <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features, <span class="at">property_filter =</span> <span class="cf">function</span>(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span>
-<span id="cb8-3"><a href="#cb8-3"></a>s2_collection</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(gdalcubes)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>s2_collection <span class="ot">=</span> <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features, <span class="at">property_filter =</span> <span class="cf">function</span>(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span>
+<span id="cb10-3"><a href="#cb10-3"></a>s2_collection</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## Image collection object, referencing 5 images with 21 bands
 ## Images:
@@ -399,13 +413,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Now, we need to think about which bands to use as predictor variables. Here, we simple use the visible and NIR bands, and additionally calculate the normalized difference vegetation index (NDVI) If the coordinates and/or time of pixels should be used as predictor variables, these can be added similarly to the data cube (see <code>?apply_pixel.cube</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(<span class="at">extent=</span>s2_collection, <span class="at">dt=</span><span class="st">"P1M"</span>, <span class="at">dx=</span><span class="dv">10</span>, <span class="at">dy=</span><span class="dv">10</span>, <span class="at">srs=</span><span class="st">"EPSG:3857"</span>, </span>
-<span id="cb10-2"><a href="#cb10-2"></a>                      <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"bilinear"</span>)</span>
-<span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a>ms_cube <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb10-7"><a href="#cb10-7"></a>ms_cube</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(<span class="at">extent=</span>s2_collection, <span class="at">dt=</span><span class="st">"P1M"</span>, <span class="at">dx=</span><span class="dv">10</span>, <span class="at">dy=</span><span class="dv">10</span>, <span class="at">srs=</span><span class="st">"EPSG:3857"</span>, </span>
+<span id="cb12-2"><a href="#cb12-2"></a>                      <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"bilinear"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a>ms_cube <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb12-7"><a href="#cb12-7"></a>ms_cube</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## A data cube proxy object
 ## 
@@ -426,13 +440,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>To extract values from the data cube at our polygons, we use the <code>extract_geom()</code> function (<a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html">see separate tutorial</a> for details). We directly combine the extracted values with the land cover labels und drop the geometry column, which is not needed for model fitting</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">gdalcubes_options</span>(<span class="at">parallel =</span> <span class="dv">8</span>)</span>
-<span id="cb12-2"><a href="#cb12-2"></a>x <span class="ot">=</span> <span class="fu">extract_geom</span>(ms_cube, training_sites, <span class="at">merge =</span> <span class="cn">TRUE</span>, <span class="at">drop_geom =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">nrow</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">gdalcubes_options</span>(<span class="at">parallel =</span> <span class="dv">8</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>x <span class="ot">=</span> <span class="fu">extract_geom</span>(ms_cube, training_sites, <span class="at">merge =</span> <span class="cn">TRUE</span>, <span class="at">drop_geom =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">nrow</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## [1] 12744</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">head</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">head</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>##   class       time      B02      B03      B04      B08        NDVI
 ## 1 water 2021-07-01 278.1733 388.4746 218.7955 223.0656 0.009663814
@@ -448,66 +462,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </h2>
 <p>Below, we use the <code>data.frame</code> to train a simple random forest model. For classification, we have to make sure that the character land cover labels are converted to a categorical variable (<code>factor</code>), before.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">library</span>(tidymodels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>## ── Attaching packages ────────────────────────────────────── tidymodels 1.1.1 ──</code></pre>
+<pre><code>## ── Attaching packages ────────────────────────────────────── tidymodels 1.5.0 ──</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>## ✔ broom        1.0.5     ✔ recipes      1.0.9
-## ✔ dials        1.2.0     ✔ rsample      1.2.0
-## ✔ dplyr        1.1.3     ✔ tibble       3.2.1
-## ✔ ggplot2      3.4.4     ✔ tidyr        1.3.0
-## ✔ infer        1.0.5     ✔ tune         1.1.2
-## ✔ modeldata    1.3.0     ✔ workflows    1.1.3
-## ✔ parsnip      1.1.1     ✔ workflowsets 1.0.1
-## ✔ purrr        1.0.2     ✔ yardstick    1.3.0</code></pre>
+<pre><code>## ✔ broom        1.0.13     ✔ recipes      1.4.0 
+## ✔ dials        1.4.4      ✔ rsample      1.3.2 
+## ✔ dplyr        1.2.1      ✔ tailor       0.1.0 
+## ✔ ggplot2      4.0.3      ✔ tidyr        1.3.2 
+## ✔ infer        1.1.0      ✔ tune         2.1.0 
+## ✔ modeldata    1.6.0      ✔ workflows    1.3.0 
+## ✔ parsnip      1.6.1      ✔ workflowsets 1.1.1 
+## ✔ purrr        1.2.2      ✔ yardstick    1.4.0</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>## ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 ## ✖ purrr::discard() masks scales::discard()
 ## ✖ dplyr::filter()  masks stats::filter()
 ## ✖ dplyr::lag()     masks stats::lag()
-## ✖ recipes::step()  masks stats::step()
-## • Learn how to get started at https://www.tidymodels.org/start/</code></pre>
+## ✖ recipes::step()  masks stats::step()</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>x<span class="sc">$</span>class <span class="ot">=</span> <span class="fu">as.factor</span>(x<span class="sc">$</span>class) <span class="co"># convert to factor</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>rf_model_fitted  <span class="ot">=</span> <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">100</span>, <span class="at">mode =</span> <span class="st">"classification"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">fit</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>x<span class="sc">$</span>class <span class="ot">=</span> <span class="fu">as.factor</span>(x<span class="sc">$</span>class) <span class="co"># convert to factor</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>rf_model_fitted  <span class="ot">=</span> <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">100</span>, <span class="at">mode =</span> <span class="st">"classification"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">fit</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> x) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notice that in real modeling applications, one would of course split the data into training, validation, and testing sets and/or apply cross validation. Since this is well documented for individual packages and this is not specific to data cubes, we skip this part here.</p>
 <p>The fitted model <code>rf_model_fitted</code> can be used to calculate predictions for any pixels of the original data cube. The code below first creates a new data cube with all predictor variables. Since we will reuse this cube a couple of times, we explicitly write it to a temporary netCDF file on disk and store the path in a variable <code>ncfile</code>. This can sometimes be helpful, because downloading the data can slow down the process if we work locally and do not directly work within AWS. Afterwards, we load the cube from disk using <code>ncdf_cube()</code> and apply the prediction. From the <code>tidymodels</code> documentation we can see that using <code>type = "class"</code> will yield a <code>tibble</code> object (a <code>data.frame</code>) with column <code>.pred_class</code>. Notice that the resulting predictions are numeric. The bookkeeping about factor levels is up to the user.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>AOI <span class="ot">=</span> <span class="fu">st_bbox</span>(<span class="fu">st_transform</span>(training_sites, <span class="st">"EPSG:3857"</span>))</span>
-<span id="cb21-2"><a href="#cb21-2"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(v, <span class="at">extent=</span><span class="fu">list</span>(<span class="at">left=</span>AOI[<span class="st">"xmin"</span>],<span class="at">right=</span>AOI[<span class="st">"xmax"</span>], <span class="at">top =</span> AOI[<span class="st">"ymax"</span>], <span class="at">bottom =</span> AOI[<span class="st">"ymin"</span>]),</span>
-<span id="cb21-3"><a href="#cb21-3"></a>              <span class="at">dx =</span> <span class="dv">10</span>, <span class="at">dy =</span> <span class="dv">10</span>)</span>
-<span id="cb21-4"><a href="#cb21-4"></a><span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a>  <span class="fu">write_ncdf</span>() <span class="ot">-&gt;</span> ncfile</span>
-<span id="cb21-8"><a href="#cb21-8"></a>  </span>
-<span id="cb21-9"><a href="#cb21-9"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb21-10"><a href="#cb21-10"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span><span class="st">".pred_class"</span>, <span class="at">type=</span><span class="st">"class"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-11"><a href="#cb21-11"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>AOI <span class="ot">=</span> <span class="fu">st_bbox</span>(<span class="fu">st_transform</span>(training_sites, <span class="st">"EPSG:3857"</span>))</span>
+<span id="cb23-2"><a href="#cb23-2"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(v, <span class="at">extent=</span><span class="fu">list</span>(<span class="at">left=</span>AOI[<span class="st">"xmin"</span>],<span class="at">right=</span>AOI[<span class="st">"xmax"</span>], <span class="at">top =</span> AOI[<span class="st">"ymax"</span>], <span class="at">bottom =</span> AOI[<span class="st">"ymin"</span>]),</span>
+<span id="cb23-3"><a href="#cb23-3"></a>              <span class="at">dx =</span> <span class="dv">10</span>, <span class="at">dy =</span> <span class="dv">10</span>)</span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>  <span class="fu">write_ncdf</span>() <span class="ot">-&gt;</span> ncfile</span>
+<span id="cb23-8"><a href="#cb23-8"></a>  </span>
+<span id="cb23-9"><a href="#cb23-9"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb23-10"><a href="#cb23-10"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span><span class="st">".pred_class"</span>, <span class="at">type=</span><span class="st">"class"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-11"><a href="#cb23-11"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<p><img src="prediction_files/figure-html/predict_tidymodels-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure"><p><img src="prediction_files/figure-html/predict_tidymodels-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>If we are instead interested in the probabilities for individual classes, we can set <code>type = "prob"</code> and provide 4 column names (one for each class) as <code>output_names</code> argument.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>out_names <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">".pred_"</span>,<span class="fu">levels</span>(x<span class="sc">$</span>class))</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span>out_names, <span class="at">type=</span><span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>out_names <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">".pred_"</span>,<span class="fu">levels</span>(x<span class="sc">$</span>class))</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span>out_names, <span class="at">type=</span><span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<p><img src="prediction_files/figure-html/predict_tidymodels_classprobs-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure"><p><img src="prediction_files/figure-html/predict_tidymodels_classprobs-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="predict-again-but-now-with-caret" class="level2"><h2 class="anchored" data-anchor-id="predict-again-but-now-with-caret">Predict again, but now with <code>caret</code>
 </h2>
 <p>The <code>caret</code> package is another widely-used framework for applying machine learning model. The script below shows how to train a model and calculate predictions for all pixels similar to the previous example. Notice that in contrast to <code>tidymodels</code>, the predict method from <code>caret</code> here returns a simple vector of predictions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(caret)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>## Loading required package: lattice</code></pre>
 </div>
@@ -521,26 +540,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ##     precision, recall, sensitivity, specificity</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
+<pre><code>## The following object is masked from 'package:rsample':
+## 
+##     calibration</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
 <pre><code>## The following object is masked from 'package:purrr':
 ## 
 ##     lift</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>samples <span class="ot">=</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> x<span class="sc">$</span>class, <span class="at">p =</span> .<span class="dv">75</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a>training <span class="ot">=</span> x[samples,]</span>
-<span id="cb28-3"><a href="#cb28-3"></a>testing <span class="ot">=</span> x[<span class="sc">-</span>samples,] </span>
-<span id="cb28-4"><a href="#cb28-4"></a><span class="fu">head</span>(training)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>samples <span class="ot">=</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> x<span class="sc">$</span>class, <span class="at">p =</span> .<span class="dv">75</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>training <span class="ot">=</span> x[samples,]</span>
+<span id="cb31-3"><a href="#cb31-3"></a>testing <span class="ot">=</span> x[<span class="sc">-</span>samples,] </span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="fu">head</span>(training)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>##   class       time      B02      B03      B04      B08        NDVI
 ## 1 water 2021-07-01 278.1733 388.4746 218.7955 223.0656 0.009663814
 ## 2 water 2021-07-01 275.6416 389.9560 215.7977 227.9578 0.027402564
-## 3 water 2021-07-01 264.9102 411.6023 226.3572 254.1946 0.057928064
-## 4 water 2021-07-01 264.1580 407.9504 224.6645 256.8592 0.066860009
 ## 6 water 2021-07-01 262.5545 406.2611 223.9684 263.6427 0.081364730
-## 7 water 2021-07-01 266.9449 399.1490 225.9979 258.5306 0.067142941</code></pre>
+## 7 water 2021-07-01 266.9449 399.1490 225.9979 258.5306 0.067142941
+## 8 water 2021-07-01 266.9231 400.7224 222.4796 247.8229 0.053887312
+## 9 water 2021-07-01 264.7381 400.6535 216.5559 241.5511 0.054562032</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>tc <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>,<span class="at">number =</span> <span class="dv">5</span>)</span>
-<span id="cb30-2"><a href="#cb30-2"></a>m <span class="ot">=</span> <span class="fu">train</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> training, <span class="at">method =</span> <span class="st">"rf"</span>, <span class="at">trControl =</span> tc)</span>
-<span id="cb30-3"><a href="#cb30-3"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>tc <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>,<span class="at">number =</span> <span class="dv">5</span>)</span>
+<span id="cb33-2"><a href="#cb33-2"></a>m <span class="ot">=</span> <span class="fu">train</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> training, <span class="at">method =</span> <span class="st">"rf"</span>, <span class="at">trControl =</span> tc)</span>
+<span id="cb33-3"><a href="#cb33-3"></a>m</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>## Random Forest 
 ## 
@@ -550,22 +574,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ## 
 ## No pre-processing
 ## Resampling: Cross-Validated (5 fold) 
-## Summary of sample sizes: 7648, 7648, 7649, 7647, 7648 
+## Summary of sample sizes: 7648, 7648, 7648, 7649, 7647 
 ## Resampling results across tuning parameters:
 ## 
 ##   mtry  Accuracy   Kappa    
-##   2     0.9948748  0.9929139
-##   3     0.9946655  0.9926237
-##   5     0.9928872  0.9901653
+##   2     0.9957112  0.9940688
+##   3     0.9947698  0.9927675
+##   5     0.9932009  0.9905967
 ## 
 ## Accuracy was used to select the optimal model using the largest value.
 ## The final value used for the model was mtry = 2.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">predict</span>(m) <span class="sc">|&gt;</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">predict</span>(m) <span class="sc">|&gt;</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<p><img src="prediction_files/figure-html/caret-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure"><p><img src="prediction_files/figure-html/caret-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section><section id="more-complex-cases" class="level2"><h2 class="anchored" data-anchor-id="more-complex-cases">More complex cases</h2>
@@ -575,43 +602,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- -->
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -619,463 +661,606 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
-    };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
           } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+            window.location.href = sourceUrl;
           }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
       });
     }
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          // default icon
-          link.classList.add("external");
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
       }
     }
-});
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html" class="pagination-link">
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../../../source/tutorials/vignettes/gc03_ML_training_data.html" class="pagination-link" aria-label="1. Extract training data for ML models">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Extract training data for ML models</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../source/tutorials/videos.html" class="pagination-link">
+      <a href="../../../source/tutorials/videos.html" class="pagination-link" aria-label="Videos">
         <span class="nav-page-text">Videos</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb33" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu"># Model prediction on data cubes</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a></span>
-<span id="cb33-5"><a href="#cb33-5"></a><span class="in">```{r}</span></span>
-<span id="cb33-6"><a href="#cb33-6"></a><span class="co">#| include: false</span></span>
-<span id="cb33-7"><a href="#cb33-7"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">comment =</span> <span class="st">"##"</span>)</span>
-<span id="cb33-8"><a href="#cb33-8"></a><span class="co">#knitr::opts_chunk$set(echo = TRUE)</span></span>
-<span id="cb33-9"><a href="#cb33-9"></a><span class="co">#knitr::opts_chunk$set(cache = TRUE)</span></span>
-<span id="cb33-10"><a href="#cb33-10"></a><span class="co">#knitr::opts_chunk$set(out.width = "65%")</span></span>
-<span id="cb33-11"><a href="#cb33-11"></a><span class="co">#knitr::opts_chunk$set(fig.align = "center")</span></span>
-<span id="cb33-12"><a href="#cb33-12"></a><span class="in">```</span></span>
-<span id="cb33-13"><a href="#cb33-13"></a></span>
-<span id="cb33-14"><a href="#cb33-14"></a></span>
-<span id="cb33-15"><a href="#cb33-15"></a><span class="fu">## Introduction</span></span>
-<span id="cb33-16"><a href="#cb33-16"></a></span>
-<span id="cb33-17"><a href="#cb33-17"></a>This tutorial demonstrates how data cubes can be used in a typical machine learning workflow from the extraction of training data to applying a trained model. We will start with labeled polygons, extract predictor variables from a cube, train a model, and finally apply the model to the full data cube to generate a time series of simple land cover predictions. To lower execution and data download times, the considered dataset and model are rather small.</span>
-<span id="cb33-18"><a href="#cb33-18"></a></span>
-<span id="cb33-19"><a href="#cb33-19"></a>_Notice that the extraction of training data from data cubes is also covered in a [separate in-depth tutorial](../vignettes/gc03_ML_training_data.Rmd)._</span>
-<span id="cb33-20"><a href="#cb33-20"></a></span>
-<span id="cb33-21"><a href="#cb33-21"></a></span>
-<span id="cb33-22"><a href="#cb33-22"></a><span class="fu">## The `predict` method</span></span>
-<span id="cb33-23"><a href="#cb33-23"></a></span>
-<span id="cb33-24"><a href="#cb33-24"></a>In the latest version, <span class="in">`gdalcubes`</span> adds a <span class="in">`predict`</span> method for data cubes. The method essentially runs a different <span class="in">`predict`</span> method (_model-specific_) based on a provided model on all pixels of a data cube. However, due to the variety of different model types and differences how prediction results are returned, we will briefly discuss some important details first.</span>
-<span id="cb33-25"><a href="#cb33-25"></a></span>
-<span id="cb33-26"><a href="#cb33-26"></a>For simple predictions that take a <span class="in">`data.frame`</span> input and yield a single vector output (e.g. <span class="in">`predict.lm`</span> with default arguments), only the data cube and the fitted model must be provided as arguments. By default, the resulting data cube will contain a single band named "pred". It is possible to change the name using the <span class="in">`output_names`</span> attribute and to keep original bands with predictor variables by setting <span class="in">`keep_bands = TRUE`</span>. </span>
-<span id="cb33-27"><a href="#cb33-27"></a></span>
-<span id="cb33-28"><a href="#cb33-28"></a>In more complex cases, the _model-specific_ predict method may return multiple output variables such as additional standard errors, confidence intervals, class probabilities, or others. For this reason, some model-specific <span class="in">`predict`</span> methods return a <span class="in">`list`</span>, <span class="in">`data.frame`</span> / <span class="in">`tibble`</span>, <span class="in">`matrix`</span>, or something else. For example, <span class="in">`predict.lm`</span> returns a list when <span class="in">`se.fit = TRUE`</span>, while the <span class="in">`tidymodels`</span> framework generally returns a <span class="in">`tibble`</span>.</span>
-<span id="cb33-29"><a href="#cb33-29"></a></span>
-<span id="cb33-30"><a href="#cb33-30"></a>In these cases, the <span class="in">`output_names`</span> argument of the <span class="in">`predict`</span> method in gdalcubes is not only used to define the variable names in the result data cube but also to specify the number of output variables and to define how variables can be extracted from the prediction output. Using <span class="in">`predict.lm`</span> with <span class="in">`se.fit = TRUE`</span> for instance returns a list with components <span class="in">`fit`</span> and <span class="in">`se.fit`</span> (see <span class="in">`?predict.lm`</span>). To add both to the result data cube, one must set <span class="in">`output_names = c("fit", "se.fit")`</span>. Similarly, for <span class="in">`tidymodels`</span> using <span class="in">`predict.model_fit`</span>, column names such as <span class="in">`.pred`</span>, <span class="in">`.pred_class`</span>, or <span class="in">`.pred_lower`</span>  (see <span class="in">`?predict.model_fit`</span>) must be provided.</span>
-<span id="cb33-31"><a href="#cb33-31"></a></span>
-<span id="cb33-32"><a href="#cb33-32"></a>Notice that additional arguments provided to the <span class="in">`predict`</span> method in gdalcubes, such as <span class="in">`type = prob`</span>, are automatically passed to the underlying _model-specific_ <span class="in">`predict`</span> method. </span>
-<span id="cb33-33"><a href="#cb33-33"></a></span>
-<span id="cb33-34"><a href="#cb33-34"></a></span>
-<span id="cb33-35"><a href="#cb33-35"></a></span>
-<span id="cb33-36"><a href="#cb33-36"></a><span class="fu">## Modeling workflow</span></span>
-<span id="cb33-37"><a href="#cb33-37"></a></span>
-<span id="cb33-38"><a href="#cb33-38"></a></span>
-<span id="cb33-39"><a href="#cb33-39"></a>The following sections illustrate these details in a practical example, where we predict land cover on Sentinel-2 data  with a Random Forest classifier. This includes the following steps:</span>
-<span id="cb33-40"><a href="#cb33-40"></a></span>
-<span id="cb33-41"><a href="#cb33-41"></a></span>
-<span id="cb33-42"><a href="#cb33-42"></a><span class="ss">1. </span>Creating a data cube with predictor variables from Sentinel-2 data on Amazon web services (AWS)</span>
-<span id="cb33-43"><a href="#cb33-43"></a></span>
-<span id="cb33-44"><a href="#cb33-44"></a><span class="ss">2. </span>Extracting predictor variables from the data cube at provided polygons, and combining land cover labels from polygons with predictor variables to create a training dataset.</span>
-<span id="cb33-45"><a href="#cb33-45"></a></span>
-<span id="cb33-46"><a href="#cb33-46"></a><span class="ss">3. </span>Training a random forest model</span>
-<span id="cb33-47"><a href="#cb33-47"></a></span>
-<span id="cb33-48"><a href="#cb33-48"></a><span class="ss">4. </span>Using the model to predict land cover on a Sentinel-2 data cube</span>
-<span id="cb33-49"><a href="#cb33-49"></a></span>
-<span id="cb33-50"><a href="#cb33-50"></a>Since the focus of this tutorial is not the model training (step 3), this part is simplified as much as possible.</span>
-<span id="cb33-51"><a href="#cb33-51"></a>Tihs typically involves hyperparameter optimization, data splitting, model validation,  and preprocessing. For details, how this can be done for specific models, please refer to the corresponding package documentation (e.g. <span class="co">[</span><span class="ot">here for tidymodels</span><span class="co">](https://www.tidymodels.org/start/)</span>). </span>
-<span id="cb33-52"><a href="#cb33-52"></a></span>
-<span id="cb33-53"><a href="#cb33-53"></a></span>
-<span id="cb33-54"><a href="#cb33-54"></a><span class="fu">## Creation of a training dataset</span></span>
-<span id="cb33-55"><a href="#cb33-55"></a></span>
-<span id="cb33-56"><a href="#cb33-56"></a>As a first step, we need to download our labeled polygons.</span>
-<span id="cb33-57"><a href="#cb33-57"></a></span>
-<span id="cb33-58"><a href="#cb33-58"></a><span class="in">```{r training_sites, fig.align='center'}</span></span>
-<span id="cb33-59"><a href="#cb33-59"></a><span class="fu">library</span>(sf)</span>
-<span id="cb33-60"><a href="#cb33-60"></a>training_sites <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"https://hs-bochum.sciebo.de/s/3qna9TDZIdgFRhr/download"</span>)</span>
-<span id="cb33-61"><a href="#cb33-61"></a><span class="fu">plot</span>(training_sites, <span class="at">axes =</span> <span class="cn">TRUE</span>, <span class="at">key.pos =</span> <span class="dv">1</span>)</span>
-<span id="cb33-62"><a href="#cb33-62"></a><span class="in">```</span></span>
-<span id="cb33-63"><a href="#cb33-63"></a></span>
-<span id="cb33-64"><a href="#cb33-64"></a></span>
-<span id="cb33-65"><a href="#cb33-65"></a>The dataset contains polygons and labels for land cover classes "agriculture", "forest", "urban", "water". </span>
-<span id="cb33-66"><a href="#cb33-66"></a>As our area of interest, we use the extent of the polygon dataset and look for (cloud-free) Sentinel-2 images in July, 2021. To find corresponding images on AWS, we use the <span class="co">[</span><span class="ot">`rstac` package</span><span class="co">](https://cran.r-project.org/package=rstac)</span> and query from the Sentinel-2 cloud-optimized GeoTIFF collection.</span>
-<span id="cb33-67"><a href="#cb33-67"></a></span>
-<span id="cb33-68"><a href="#cb33-68"></a><span class="in">```{r stac}</span></span>
-<span id="cb33-69"><a href="#cb33-69"></a>bbox <span class="ot">=</span> <span class="fu">st_bbox</span>(training_sites) </span>
-<span id="cb33-70"><a href="#cb33-70"></a>bbox</span>
-<span id="cb33-71"><a href="#cb33-71"></a><span class="fu">library</span>(rstac)</span>
-<span id="cb33-72"><a href="#cb33-72"></a>s <span class="ot">=</span> <span class="fu">stac</span>(<span class="st">"https://earth-search.aws.element84.com/v0"</span>)</span>
-<span id="cb33-73"><a href="#cb33-73"></a>  items <span class="ot">=</span> s <span class="sc">|&gt;</span></span>
-<span id="cb33-74"><a href="#cb33-74"></a>    <span class="fu">stac_search</span>(<span class="at">collections =</span> <span class="st">"sentinel-s2-l2a-cogs"</span>,</span>
-<span id="cb33-75"><a href="#cb33-75"></a>                <span class="at">bbox =</span> <span class="fu">c</span>(bbox[<span class="st">"xmin"</span>],bbox[<span class="st">"ymin"</span>],</span>
-<span id="cb33-76"><a href="#cb33-76"></a>                         bbox[<span class="st">"xmax"</span>],bbox[<span class="st">"ymax"</span>]), </span>
-<span id="cb33-77"><a href="#cb33-77"></a>                <span class="at">datetime =</span> <span class="st">"2021-07-01/2021-07-31"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-78"><a href="#cb33-78"></a>    <span class="fu">post_request</span>() <span class="sc">|&gt;</span> <span class="fu">items_fetch</span>(<span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb33-79"><a href="#cb33-79"></a>  <span class="fu">length</span>(items<span class="sc">$</span>features)</span>
-<span id="cb33-80"><a href="#cb33-80"></a><span class="in">```</span></span>
-<span id="cb33-81"><a href="#cb33-81"></a></span>
-<span id="cb33-82"><a href="#cb33-82"></a>To filter by cloud coverage and create a gdalcubes image collection object, we apply <span class="in">`stac_image_collection()`</span> on the resulting list of 26 images. </span>
-<span id="cb33-83"><a href="#cb33-83"></a></span>
-<span id="cb33-86"><a href="#cb33-86"></a><span class="in">```{r}</span></span>
-<span id="cb33-87"><a href="#cb33-87"></a><span class="fu">library</span>(gdalcubes)</span>
-<span id="cb33-88"><a href="#cb33-88"></a>s2_collection <span class="ot">=</span> <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features, <span class="at">property_filter =</span> <span class="cf">function</span>(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span>
-<span id="cb33-89"><a href="#cb33-89"></a>s2_collection</span>
-<span id="cb33-90"><a href="#cb33-90"></a><span class="in">```</span></span>
-<span id="cb33-91"><a href="#cb33-91"></a></span>
-<span id="cb33-92"><a href="#cb33-92"></a></span>
-<span id="cb33-93"><a href="#cb33-93"></a>Now, we need to think about which bands to use as predictor variables. Here, we simple use the visible and NIR bands, and additionally calculate the normalized difference vegetation index (NDVI) If the coordinates and/or time of pixels should be used as predictor variables, these can be added similarly to the data cube (see <span class="in">`?apply_pixel.cube`</span>).</span>
-<span id="cb33-94"><a href="#cb33-94"></a></span>
-<span id="cb33-95"><a href="#cb33-95"></a><span class="in">```{r mscube}</span></span>
-<span id="cb33-96"><a href="#cb33-96"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(<span class="at">extent=</span>s2_collection, <span class="at">dt=</span><span class="st">"P1M"</span>, <span class="at">dx=</span><span class="dv">10</span>, <span class="at">dy=</span><span class="dv">10</span>, <span class="at">srs=</span><span class="st">"EPSG:3857"</span>, </span>
-<span id="cb33-97"><a href="#cb33-97"></a>                      <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"bilinear"</span>)</span>
-<span id="cb33-98"><a href="#cb33-98"></a></span>
-<span id="cb33-99"><a href="#cb33-99"></a>ms_cube <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
-<span id="cb33-100"><a href="#cb33-100"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb33-101"><a href="#cb33-101"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb33-102"><a href="#cb33-102"></a>ms_cube</span>
-<span id="cb33-103"><a href="#cb33-103"></a><span class="in">```</span></span>
-<span id="cb33-104"><a href="#cb33-104"></a></span>
-<span id="cb33-105"><a href="#cb33-105"></a></span>
-<span id="cb33-106"><a href="#cb33-106"></a>To extract values from the data cube at our polygons, we use the <span class="in">`extract_geom()`</span> function (<span class="co">[</span><span class="ot">see separate tutorial</span><span class="co">](../vignettes/gc03_ML_training_data.Rmd)</span> for details). We directly combine the extracted values with the land cover labels und drop the geometry column, which is not needed for model fitting</span>
-<span id="cb33-107"><a href="#cb33-107"></a> </span>
-<span id="cb33-108"><a href="#cb33-108"></a><span class="in">```{r extract}</span></span>
-<span id="cb33-109"><a href="#cb33-109"></a><span class="fu">gdalcubes_options</span>(<span class="at">parallel =</span> <span class="dv">8</span>)</span>
-<span id="cb33-110"><a href="#cb33-110"></a>x <span class="ot">=</span> <span class="fu">extract_geom</span>(ms_cube, training_sites, <span class="at">merge =</span> <span class="cn">TRUE</span>, <span class="at">drop_geom =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb33-111"><a href="#cb33-111"></a><span class="fu">nrow</span>(x)</span>
-<span id="cb33-112"><a href="#cb33-112"></a><span class="fu">head</span>(x)</span>
-<span id="cb33-113"><a href="#cb33-113"></a><span class="in">```</span></span>
-<span id="cb33-114"><a href="#cb33-114"></a></span>
-<span id="cb33-115"><a href="#cb33-115"></a>The result is a data frame with columns for the label (output variable) and predictor variables ("B02","B03","B04","B08", "NDVI").</span>
-<span id="cb33-116"><a href="#cb33-116"></a></span>
-<span id="cb33-117"><a href="#cb33-117"></a></span>
-<span id="cb33-118"><a href="#cb33-118"></a><span class="fu">## Training and prediction with `tidymodels`</span></span>
-<span id="cb33-119"><a href="#cb33-119"></a></span>
-<span id="cb33-120"><a href="#cb33-120"></a>Below, we use the <span class="in">`data.frame`</span> to train a simple random forest model. For classification, we have to make sure that the </span>
-<span id="cb33-121"><a href="#cb33-121"></a>character land cover labels are converted to a categorical variable (<span class="in">`factor`</span>), before.</span>
-<span id="cb33-122"><a href="#cb33-122"></a></span>
-<span id="cb33-123"><a href="#cb33-123"></a><span class="in">```{r model_fitting}</span></span>
-<span id="cb33-124"><a href="#cb33-124"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb33-125"><a href="#cb33-125"></a>x<span class="sc">$</span>class <span class="ot">=</span> <span class="fu">as.factor</span>(x<span class="sc">$</span>class) <span class="co"># convert to factor</span></span>
-<span id="cb33-126"><a href="#cb33-126"></a>rf_model_fitted  <span class="ot">=</span> <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">100</span>, <span class="at">mode =</span> <span class="st">"classification"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-127"><a href="#cb33-127"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-128"><a href="#cb33-128"></a>  <span class="fu">fit</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> x) </span>
-<span id="cb33-129"><a href="#cb33-129"></a><span class="in">```</span></span>
-<span id="cb33-130"><a href="#cb33-130"></a></span>
-<span id="cb33-131"><a href="#cb33-131"></a>Notice that in real modeling applications, one would of course split the data into training, validation, and testing sets and/or apply cross validation. Since this is well documented for individual packages and this is not specific to data cubes, we skip this part here. </span>
-<span id="cb33-132"><a href="#cb33-132"></a></span>
-<span id="cb33-133"><a href="#cb33-133"></a></span>
-<span id="cb33-134"><a href="#cb33-134"></a>The fitted model <span class="in">`rf_model_fitted`</span> can be used to calculate predictions for any pixels of the original data cube. The code below first creates a new data cube with all predictor variables. Since we will reuse this cube a couple of times, we explicitly write it to a temporary netCDF file on disk and store the path in a variable <span class="in">`ncfile`</span>. This can sometimes be helpful, because downloading the data can slow down the process if we work locally and do not directly work within AWS. Afterwards, we load the cube from disk using <span class="in">`ncdf_cube()`</span> and apply the prediction. From the <span class="in">`tidymodels`</span> documentation we can see that using <span class="in">`type = "class"`</span> will yield a <span class="in">`tibble`</span> object (a <span class="in">`data.frame`</span>) with column <span class="in">`.pred_class`</span>. Notice that the resulting predictions are numeric. The bookkeeping about factor levels is up to the user.</span>
-<span id="cb33-135"><a href="#cb33-135"></a></span>
-<span id="cb33-136"><a href="#cb33-136"></a><span class="in">```{r  predict_tidymodels}</span></span>
-<span id="cb33-137"><a href="#cb33-137"></a>AOI <span class="ot">=</span> <span class="fu">st_bbox</span>(<span class="fu">st_transform</span>(training_sites, <span class="st">"EPSG:3857"</span>))</span>
-<span id="cb33-138"><a href="#cb33-138"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(v, <span class="at">extent=</span><span class="fu">list</span>(<span class="at">left=</span>AOI[<span class="st">"xmin"</span>],<span class="at">right=</span>AOI[<span class="st">"xmax"</span>], <span class="at">top =</span> AOI[<span class="st">"ymax"</span>], <span class="at">bottom =</span> AOI[<span class="st">"ymin"</span>]),</span>
-<span id="cb33-139"><a href="#cb33-139"></a>              <span class="at">dx =</span> <span class="dv">10</span>, <span class="at">dy =</span> <span class="dv">10</span>)</span>
-<span id="cb33-140"><a href="#cb33-140"></a><span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
-<span id="cb33-141"><a href="#cb33-141"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb33-142"><a href="#cb33-142"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-143"><a href="#cb33-143"></a>  <span class="fu">write_ncdf</span>() <span class="ot">-&gt;</span> ncfile</span>
-<span id="cb33-144"><a href="#cb33-144"></a>  </span>
-<span id="cb33-145"><a href="#cb33-145"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb33-146"><a href="#cb33-146"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span><span class="st">".pred_class"</span>, <span class="at">type=</span><span class="st">"class"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-147"><a href="#cb33-147"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span>
-<span id="cb33-148"><a href="#cb33-148"></a><span class="in">```</span></span>
-<span id="cb33-149"><a href="#cb33-149"></a></span>
-<span id="cb33-150"><a href="#cb33-150"></a></span>
-<span id="cb33-151"><a href="#cb33-151"></a>If we are instead interested in the probabilities for individual classes, we can set <span class="in">`type = "prob"`</span> and provide 4 column names (one for each class) as <span class="in">`output_names`</span> argument.  </span>
-<span id="cb33-152"><a href="#cb33-152"></a></span>
-<span id="cb33-153"><a href="#cb33-153"></a></span>
-<span id="cb33-154"><a href="#cb33-154"></a><span class="in">```{r predict_tidymodels_classprobs}</span></span>
-<span id="cb33-155"><a href="#cb33-155"></a>out_names <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">".pred_"</span>,<span class="fu">levels</span>(x<span class="sc">$</span>class))</span>
-<span id="cb33-156"><a href="#cb33-156"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb33-157"><a href="#cb33-157"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span>out_names, <span class="at">type=</span><span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb33-158"><a href="#cb33-158"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis)</span>
-<span id="cb33-159"><a href="#cb33-159"></a><span class="in">```</span></span>
-<span id="cb33-160"><a href="#cb33-160"></a></span>
-<span id="cb33-161"><a href="#cb33-161"></a></span>
-<span id="cb33-162"><a href="#cb33-162"></a></span>
-<span id="cb33-163"><a href="#cb33-163"></a><span class="fu">## Predict again, but now with `caret`</span></span>
-<span id="cb33-164"><a href="#cb33-164"></a></span>
-<span id="cb33-165"><a href="#cb33-165"></a>The <span class="in">`caret`</span> package is another widely-used framework for applying machine learning model. The script below</span>
-<span id="cb33-166"><a href="#cb33-166"></a>shows how to train a model and calculate predictions for all pixels similar to the previous example.</span>
-<span id="cb33-167"><a href="#cb33-167"></a>Notice that in contrast to <span class="in">`tidymodels`</span>, the predict method from <span class="in">`caret`</span> here returns a simple vector of predictions.</span>
-<span id="cb33-168"><a href="#cb33-168"></a></span>
-<span id="cb33-169"><a href="#cb33-169"></a></span>
-<span id="cb33-170"><a href="#cb33-170"></a><span class="in">```{r caret}</span></span>
-<span id="cb33-171"><a href="#cb33-171"></a><span class="fu">library</span>(caret)</span>
-<span id="cb33-172"><a href="#cb33-172"></a></span>
-<span id="cb33-173"><a href="#cb33-173"></a>samples <span class="ot">=</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> x<span class="sc">$</span>class, <span class="at">p =</span> .<span class="dv">75</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb33-174"><a href="#cb33-174"></a>training <span class="ot">=</span> x[samples,]</span>
-<span id="cb33-175"><a href="#cb33-175"></a>testing <span class="ot">=</span> x[<span class="sc">-</span>samples,] </span>
-<span id="cb33-176"><a href="#cb33-176"></a><span class="fu">head</span>(training)</span>
-<span id="cb33-177"><a href="#cb33-177"></a></span>
-<span id="cb33-178"><a href="#cb33-178"></a>tc <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>,<span class="at">number =</span> <span class="dv">5</span>)</span>
-<span id="cb33-179"><a href="#cb33-179"></a>m <span class="ot">=</span> <span class="fu">train</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> training, <span class="at">method =</span> <span class="st">"rf"</span>, <span class="at">trControl =</span> tc)</span>
-<span id="cb33-180"><a href="#cb33-180"></a>m</span>
-<span id="cb33-181"><a href="#cb33-181"></a></span>
-<span id="cb33-182"><a href="#cb33-182"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
-<span id="cb33-183"><a href="#cb33-183"></a>  <span class="fu">predict</span>(m) <span class="sc">|&gt;</span></span>
-<span id="cb33-184"><a href="#cb33-184"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span>
-<span id="cb33-185"><a href="#cb33-185"></a><span class="in">```</span></span>
-<span id="cb33-186"><a href="#cb33-186"></a></span>
-<span id="cb33-187"><a href="#cb33-187"></a></span>
-<span id="cb33-188"><a href="#cb33-188"></a></span>
-<span id="cb33-189"><a href="#cb33-189"></a></span>
-<span id="cb33-190"><a href="#cb33-190"></a></span>
-<span id="cb33-191"><a href="#cb33-191"></a></span>
-<span id="cb33-192"><a href="#cb33-192"></a><span class="fu">## More complex cases</span></span>
-<span id="cb33-193"><a href="#cb33-193"></a></span>
-<span id="cb33-194"><a href="#cb33-194"></a>The <span class="in">`predict`</span> method in gdalcubes has been designed to work with most common model types (e.g. from <span class="in">`tidymodels`</span>, <span class="in">`caret`</span>, as well as simple <span class="in">`lm`</span> or <span class="in">`glm`</span> models). However, there might be cases, where it is not possible to use it e.g., when model-specific <span class="in">`predict`</span> method return more complex nested structures, like a list of matrices. As an alternative approach (with different pitfalls), it is possible to convert a complete data cube to a <span class="in">`data.frame`</span> using <span class="in">`as.data.frame()`</span> and directly apply the model-specific predict method on it. This, however, may only work for smaller data cubes and requires some additional effort to convert the prediction results to images / data cubes.</span>
-<span id="cb33-195"><a href="#cb33-195"></a></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu"># Model prediction on data cubes</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-5"><a href="#cb36-5"></a><span class="in">```{r}</span></span>
+<span id="cb36-6"><a href="#cb36-6"></a><span class="co">#| include: false</span></span>
+<span id="cb36-7"><a href="#cb36-7"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">comment =</span> <span class="st">"##"</span>)</span>
+<span id="cb36-8"><a href="#cb36-8"></a><span class="co">#knitr::opts_chunk$set(echo = TRUE)</span></span>
+<span id="cb36-9"><a href="#cb36-9"></a><span class="co">#knitr::opts_chunk$set(cache = TRUE)</span></span>
+<span id="cb36-10"><a href="#cb36-10"></a><span class="co">#knitr::opts_chunk$set(out.width = "65%")</span></span>
+<span id="cb36-11"><a href="#cb36-11"></a><span class="co">#knitr::opts_chunk$set(fig.align = "center")</span></span>
+<span id="cb36-12"><a href="#cb36-12"></a><span class="in">```</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a></span>
+<span id="cb36-14"><a href="#cb36-14"></a></span>
+<span id="cb36-15"><a href="#cb36-15"></a><span class="fu">## Introduction</span></span>
+<span id="cb36-16"><a href="#cb36-16"></a></span>
+<span id="cb36-17"><a href="#cb36-17"></a>This tutorial demonstrates how data cubes can be used in a typical machine learning workflow from the extraction of training data to applying a trained model. We will start with labeled polygons, extract predictor variables from a cube, train a model, and finally apply the model to the full data cube to generate a time series of simple land cover predictions. To lower execution and data download times, the considered dataset and model are rather small.</span>
+<span id="cb36-18"><a href="#cb36-18"></a></span>
+<span id="cb36-19"><a href="#cb36-19"></a>_Notice that the extraction of training data from data cubes is also covered in a [separate in-depth tutorial](../vignettes/gc03_ML_training_data.Rmd)._</span>
+<span id="cb36-20"><a href="#cb36-20"></a></span>
+<span id="cb36-21"><a href="#cb36-21"></a></span>
+<span id="cb36-22"><a href="#cb36-22"></a><span class="fu">## The `predict` method</span></span>
+<span id="cb36-23"><a href="#cb36-23"></a></span>
+<span id="cb36-24"><a href="#cb36-24"></a>In the latest version, <span class="in">`gdalcubes`</span> adds a <span class="in">`predict`</span> method for data cubes. The method essentially runs a different <span class="in">`predict`</span> method (_model-specific_) based on a provided model on all pixels of a data cube. However, due to the variety of different model types and differences how prediction results are returned, we will briefly discuss some important details first.</span>
+<span id="cb36-25"><a href="#cb36-25"></a></span>
+<span id="cb36-26"><a href="#cb36-26"></a>For simple predictions that take a <span class="in">`data.frame`</span> input and yield a single vector output (e.g. <span class="in">`predict.lm`</span> with default arguments), only the data cube and the fitted model must be provided as arguments. By default, the resulting data cube will contain a single band named "pred". It is possible to change the name using the <span class="in">`output_names`</span> attribute and to keep original bands with predictor variables by setting <span class="in">`keep_bands = TRUE`</span>. </span>
+<span id="cb36-27"><a href="#cb36-27"></a></span>
+<span id="cb36-28"><a href="#cb36-28"></a>In more complex cases, the _model-specific_ predict method may return multiple output variables such as additional standard errors, confidence intervals, class probabilities, or others. For this reason, some model-specific <span class="in">`predict`</span> methods return a <span class="in">`list`</span>, <span class="in">`data.frame`</span> / <span class="in">`tibble`</span>, <span class="in">`matrix`</span>, or something else. For example, <span class="in">`predict.lm`</span> returns a list when <span class="in">`se.fit = TRUE`</span>, while the <span class="in">`tidymodels`</span> framework generally returns a <span class="in">`tibble`</span>.</span>
+<span id="cb36-29"><a href="#cb36-29"></a></span>
+<span id="cb36-30"><a href="#cb36-30"></a>In these cases, the <span class="in">`output_names`</span> argument of the <span class="in">`predict`</span> method in gdalcubes is not only used to define the variable names in the result data cube but also to specify the number of output variables and to define how variables can be extracted from the prediction output. Using <span class="in">`predict.lm`</span> with <span class="in">`se.fit = TRUE`</span> for instance returns a list with components <span class="in">`fit`</span> and <span class="in">`se.fit`</span> (see <span class="in">`?predict.lm`</span>). To add both to the result data cube, one must set <span class="in">`output_names = c("fit", "se.fit")`</span>. Similarly, for <span class="in">`tidymodels`</span> using <span class="in">`predict.model_fit`</span>, column names such as <span class="in">`.pred`</span>, <span class="in">`.pred_class`</span>, or <span class="in">`.pred_lower`</span>  (see <span class="in">`?predict.model_fit`</span>) must be provided.</span>
+<span id="cb36-31"><a href="#cb36-31"></a></span>
+<span id="cb36-32"><a href="#cb36-32"></a>Notice that additional arguments provided to the <span class="in">`predict`</span> method in gdalcubes, such as <span class="in">`type = prob`</span>, are automatically passed to the underlying _model-specific_ <span class="in">`predict`</span> method. </span>
+<span id="cb36-33"><a href="#cb36-33"></a></span>
+<span id="cb36-34"><a href="#cb36-34"></a></span>
+<span id="cb36-35"><a href="#cb36-35"></a></span>
+<span id="cb36-36"><a href="#cb36-36"></a><span class="fu">## Modeling workflow</span></span>
+<span id="cb36-37"><a href="#cb36-37"></a></span>
+<span id="cb36-38"><a href="#cb36-38"></a></span>
+<span id="cb36-39"><a href="#cb36-39"></a>The following sections illustrate these details in a practical example, where we predict land cover on Sentinel-2 data  with a Random Forest classifier. This includes the following steps:</span>
+<span id="cb36-40"><a href="#cb36-40"></a></span>
+<span id="cb36-41"><a href="#cb36-41"></a></span>
+<span id="cb36-42"><a href="#cb36-42"></a><span class="ss">1. </span>Creating a data cube with predictor variables from Sentinel-2 data on Amazon web services (AWS)</span>
+<span id="cb36-43"><a href="#cb36-43"></a></span>
+<span id="cb36-44"><a href="#cb36-44"></a><span class="ss">2. </span>Extracting predictor variables from the data cube at provided polygons, and combining land cover labels from polygons with predictor variables to create a training dataset.</span>
+<span id="cb36-45"><a href="#cb36-45"></a></span>
+<span id="cb36-46"><a href="#cb36-46"></a><span class="ss">3. </span>Training a random forest model</span>
+<span id="cb36-47"><a href="#cb36-47"></a></span>
+<span id="cb36-48"><a href="#cb36-48"></a><span class="ss">4. </span>Using the model to predict land cover on a Sentinel-2 data cube</span>
+<span id="cb36-49"><a href="#cb36-49"></a></span>
+<span id="cb36-50"><a href="#cb36-50"></a>Since the focus of this tutorial is not the model training (step 3), this part is simplified as much as possible.</span>
+<span id="cb36-51"><a href="#cb36-51"></a>Tihs typically involves hyperparameter optimization, data splitting, model validation,  and preprocessing. For details, how this can be done for specific models, please refer to the corresponding package documentation (e.g. <span class="co">[</span><span class="ot">here for tidymodels</span><span class="co">](https://www.tidymodels.org/start/)</span>). </span>
+<span id="cb36-52"><a href="#cb36-52"></a></span>
+<span id="cb36-53"><a href="#cb36-53"></a></span>
+<span id="cb36-54"><a href="#cb36-54"></a><span class="fu">## Creation of a training dataset</span></span>
+<span id="cb36-55"><a href="#cb36-55"></a></span>
+<span id="cb36-56"><a href="#cb36-56"></a>As a first step, we need to download our labeled polygons.</span>
+<span id="cb36-57"><a href="#cb36-57"></a></span>
+<span id="cb36-58"><a href="#cb36-58"></a><span class="in">```{r training_sites, fig.align='center'}</span></span>
+<span id="cb36-59"><a href="#cb36-59"></a><span class="fu">library</span>(sf)</span>
+<span id="cb36-60"><a href="#cb36-60"></a>training_sites <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"https://hs-bochum.sciebo.de/s/3qna9TDZIdgFRhr/download"</span>)</span>
+<span id="cb36-61"><a href="#cb36-61"></a><span class="fu">plot</span>(training_sites, <span class="at">axes =</span> <span class="cn">TRUE</span>, <span class="at">key.pos =</span> <span class="dv">1</span>)</span>
+<span id="cb36-62"><a href="#cb36-62"></a><span class="in">```</span></span>
+<span id="cb36-63"><a href="#cb36-63"></a></span>
+<span id="cb36-64"><a href="#cb36-64"></a></span>
+<span id="cb36-65"><a href="#cb36-65"></a>The dataset contains polygons and labels for land cover classes "agriculture", "forest", "urban", "water". </span>
+<span id="cb36-66"><a href="#cb36-66"></a>As our area of interest, we use the extent of the polygon dataset and look for (cloud-free) Sentinel-2 images in July, 2021. To find corresponding images on AWS, we use the <span class="co">[</span><span class="ot">`rstac` package</span><span class="co">](https://cran.r-project.org/package=rstac)</span> and query from the Sentinel-2 cloud-optimized GeoTIFF collection.</span>
+<span id="cb36-67"><a href="#cb36-67"></a></span>
+<span id="cb36-68"><a href="#cb36-68"></a><span class="in">```{r stac}</span></span>
+<span id="cb36-69"><a href="#cb36-69"></a>bbox <span class="ot">=</span> <span class="fu">st_bbox</span>(training_sites) </span>
+<span id="cb36-70"><a href="#cb36-70"></a>bbox</span>
+<span id="cb36-71"><a href="#cb36-71"></a><span class="fu">library</span>(rstac)</span>
+<span id="cb36-72"><a href="#cb36-72"></a>s <span class="ot">=</span> <span class="fu">stac</span>(<span class="st">"https://earth-search.aws.element84.com/v0"</span>)</span>
+<span id="cb36-73"><a href="#cb36-73"></a>  items <span class="ot">=</span> s <span class="sc">|&gt;</span></span>
+<span id="cb36-74"><a href="#cb36-74"></a>    <span class="fu">stac_search</span>(<span class="at">collections =</span> <span class="st">"sentinel-s2-l2a-cogs"</span>,</span>
+<span id="cb36-75"><a href="#cb36-75"></a>                <span class="at">bbox =</span> <span class="fu">c</span>(bbox[<span class="st">"xmin"</span>],bbox[<span class="st">"ymin"</span>],</span>
+<span id="cb36-76"><a href="#cb36-76"></a>                         bbox[<span class="st">"xmax"</span>],bbox[<span class="st">"ymax"</span>]), </span>
+<span id="cb36-77"><a href="#cb36-77"></a>                <span class="at">datetime =</span> <span class="st">"2021-07-01/2021-07-31"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-78"><a href="#cb36-78"></a>    <span class="fu">post_request</span>() <span class="sc">|&gt;</span> <span class="fu">items_fetch</span>(<span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb36-79"><a href="#cb36-79"></a>  <span class="fu">length</span>(items<span class="sc">$</span>features)</span>
+<span id="cb36-80"><a href="#cb36-80"></a><span class="in">```</span></span>
+<span id="cb36-81"><a href="#cb36-81"></a></span>
+<span id="cb36-82"><a href="#cb36-82"></a>To filter by cloud coverage and create a gdalcubes image collection object, we apply <span class="in">`stac_image_collection()`</span> on the resulting list of 26 images. </span>
+<span id="cb36-83"><a href="#cb36-83"></a></span>
+<span id="cb36-86"><a href="#cb36-86"></a><span class="in">```{r}</span></span>
+<span id="cb36-87"><a href="#cb36-87"></a><span class="fu">library</span>(gdalcubes)</span>
+<span id="cb36-88"><a href="#cb36-88"></a>s2_collection <span class="ot">=</span> <span class="fu">stac_image_collection</span>(items<span class="sc">$</span>features, <span class="at">property_filter =</span> <span class="cf">function</span>(x) {x[[<span class="st">"eo:cloud_cover"</span>]] <span class="sc">&lt;</span> <span class="dv">20</span>})</span>
+<span id="cb36-89"><a href="#cb36-89"></a>s2_collection</span>
+<span id="cb36-90"><a href="#cb36-90"></a><span class="in">```</span></span>
+<span id="cb36-91"><a href="#cb36-91"></a></span>
+<span id="cb36-92"><a href="#cb36-92"></a></span>
+<span id="cb36-93"><a href="#cb36-93"></a>Now, we need to think about which bands to use as predictor variables. Here, we simple use the visible and NIR bands, and additionally calculate the normalized difference vegetation index (NDVI) If the coordinates and/or time of pixels should be used as predictor variables, these can be added similarly to the data cube (see <span class="in">`?apply_pixel.cube`</span>).</span>
+<span id="cb36-94"><a href="#cb36-94"></a></span>
+<span id="cb36-95"><a href="#cb36-95"></a><span class="in">```{r mscube}</span></span>
+<span id="cb36-96"><a href="#cb36-96"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(<span class="at">extent=</span>s2_collection, <span class="at">dt=</span><span class="st">"P1M"</span>, <span class="at">dx=</span><span class="dv">10</span>, <span class="at">dy=</span><span class="dv">10</span>, <span class="at">srs=</span><span class="st">"EPSG:3857"</span>, </span>
+<span id="cb36-97"><a href="#cb36-97"></a>                      <span class="at">aggregation =</span> <span class="st">"median"</span>, <span class="at">resampling =</span> <span class="st">"bilinear"</span>)</span>
+<span id="cb36-98"><a href="#cb36-98"></a></span>
+<span id="cb36-99"><a href="#cb36-99"></a>ms_cube <span class="ot">&lt;-</span> <span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
+<span id="cb36-100"><a href="#cb36-100"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb36-101"><a href="#cb36-101"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb36-102"><a href="#cb36-102"></a>ms_cube</span>
+<span id="cb36-103"><a href="#cb36-103"></a><span class="in">```</span></span>
+<span id="cb36-104"><a href="#cb36-104"></a></span>
+<span id="cb36-105"><a href="#cb36-105"></a></span>
+<span id="cb36-106"><a href="#cb36-106"></a>To extract values from the data cube at our polygons, we use the <span class="in">`extract_geom()`</span> function (<span class="co">[</span><span class="ot">see separate tutorial</span><span class="co">](../vignettes/gc03_ML_training_data.Rmd)</span> for details). We directly combine the extracted values with the land cover labels und drop the geometry column, which is not needed for model fitting</span>
+<span id="cb36-107"><a href="#cb36-107"></a> </span>
+<span id="cb36-108"><a href="#cb36-108"></a><span class="in">```{r extract}</span></span>
+<span id="cb36-109"><a href="#cb36-109"></a><span class="fu">gdalcubes_options</span>(<span class="at">parallel =</span> <span class="dv">8</span>)</span>
+<span id="cb36-110"><a href="#cb36-110"></a>x <span class="ot">=</span> <span class="fu">extract_geom</span>(ms_cube, training_sites, <span class="at">merge =</span> <span class="cn">TRUE</span>, <span class="at">drop_geom =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb36-111"><a href="#cb36-111"></a><span class="fu">nrow</span>(x)</span>
+<span id="cb36-112"><a href="#cb36-112"></a><span class="fu">head</span>(x)</span>
+<span id="cb36-113"><a href="#cb36-113"></a><span class="in">```</span></span>
+<span id="cb36-114"><a href="#cb36-114"></a></span>
+<span id="cb36-115"><a href="#cb36-115"></a>The result is a data frame with columns for the label (output variable) and predictor variables ("B02","B03","B04","B08", "NDVI").</span>
+<span id="cb36-116"><a href="#cb36-116"></a></span>
+<span id="cb36-117"><a href="#cb36-117"></a></span>
+<span id="cb36-118"><a href="#cb36-118"></a><span class="fu">## Training and prediction with `tidymodels`</span></span>
+<span id="cb36-119"><a href="#cb36-119"></a></span>
+<span id="cb36-120"><a href="#cb36-120"></a>Below, we use the <span class="in">`data.frame`</span> to train a simple random forest model. For classification, we have to make sure that the </span>
+<span id="cb36-121"><a href="#cb36-121"></a>character land cover labels are converted to a categorical variable (<span class="in">`factor`</span>), before.</span>
+<span id="cb36-122"><a href="#cb36-122"></a></span>
+<span id="cb36-123"><a href="#cb36-123"></a><span class="in">```{r model_fitting}</span></span>
+<span id="cb36-124"><a href="#cb36-124"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb36-125"><a href="#cb36-125"></a>x<span class="sc">$</span>class <span class="ot">=</span> <span class="fu">as.factor</span>(x<span class="sc">$</span>class) <span class="co"># convert to factor</span></span>
+<span id="cb36-126"><a href="#cb36-126"></a>rf_model_fitted  <span class="ot">=</span> <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">100</span>, <span class="at">mode =</span> <span class="st">"classification"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-127"><a href="#cb36-127"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-128"><a href="#cb36-128"></a>  <span class="fu">fit</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> x) </span>
+<span id="cb36-129"><a href="#cb36-129"></a><span class="in">```</span></span>
+<span id="cb36-130"><a href="#cb36-130"></a></span>
+<span id="cb36-131"><a href="#cb36-131"></a>Notice that in real modeling applications, one would of course split the data into training, validation, and testing sets and/or apply cross validation. Since this is well documented for individual packages and this is not specific to data cubes, we skip this part here. </span>
+<span id="cb36-132"><a href="#cb36-132"></a></span>
+<span id="cb36-133"><a href="#cb36-133"></a></span>
+<span id="cb36-134"><a href="#cb36-134"></a>The fitted model <span class="in">`rf_model_fitted`</span> can be used to calculate predictions for any pixels of the original data cube. The code below first creates a new data cube with all predictor variables. Since we will reuse this cube a couple of times, we explicitly write it to a temporary netCDF file on disk and store the path in a variable <span class="in">`ncfile`</span>. This can sometimes be helpful, because downloading the data can slow down the process if we work locally and do not directly work within AWS. Afterwards, we load the cube from disk using <span class="in">`ncdf_cube()`</span> and apply the prediction. From the <span class="in">`tidymodels`</span> documentation we can see that using <span class="in">`type = "class"`</span> will yield a <span class="in">`tibble`</span> object (a <span class="in">`data.frame`</span>) with column <span class="in">`.pred_class`</span>. Notice that the resulting predictions are numeric. The bookkeeping about factor levels is up to the user.</span>
+<span id="cb36-135"><a href="#cb36-135"></a></span>
+<span id="cb36-136"><a href="#cb36-136"></a><span class="in">```{r  predict_tidymodels}</span></span>
+<span id="cb36-137"><a href="#cb36-137"></a>AOI <span class="ot">=</span> <span class="fu">st_bbox</span>(<span class="fu">st_transform</span>(training_sites, <span class="st">"EPSG:3857"</span>))</span>
+<span id="cb36-138"><a href="#cb36-138"></a>v <span class="ot">=</span> <span class="fu">cube_view</span>(v, <span class="at">extent=</span><span class="fu">list</span>(<span class="at">left=</span>AOI[<span class="st">"xmin"</span>],<span class="at">right=</span>AOI[<span class="st">"xmax"</span>], <span class="at">top =</span> AOI[<span class="st">"ymax"</span>], <span class="at">bottom =</span> AOI[<span class="st">"ymin"</span>]),</span>
+<span id="cb36-139"><a href="#cb36-139"></a>              <span class="at">dx =</span> <span class="dv">10</span>, <span class="at">dy =</span> <span class="dv">10</span>)</span>
+<span id="cb36-140"><a href="#cb36-140"></a><span class="fu">raster_cube</span>(s2_collection, v) <span class="sc">|&gt;</span> <span class="co"># no mask</span></span>
+<span id="cb36-141"><a href="#cb36-141"></a>  <span class="fu">select_bands</span>(<span class="fu">c</span>(<span class="st">"B02"</span>,<span class="st">"B03"</span>,<span class="st">"B04"</span>,<span class="st">"B08"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb36-142"><a href="#cb36-142"></a>  <span class="fu">apply_pixel</span>(<span class="st">"(B08-B04)/(B08+B04)"</span>, <span class="st">"NDVI"</span>, <span class="at">keep_bands =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-143"><a href="#cb36-143"></a>  <span class="fu">write_ncdf</span>() <span class="ot">-&gt;</span> ncfile</span>
+<span id="cb36-144"><a href="#cb36-144"></a>  </span>
+<span id="cb36-145"><a href="#cb36-145"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb36-146"><a href="#cb36-146"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span><span class="st">".pred_class"</span>, <span class="at">type=</span><span class="st">"class"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-147"><a href="#cb36-147"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span>
+<span id="cb36-148"><a href="#cb36-148"></a><span class="in">```</span></span>
+<span id="cb36-149"><a href="#cb36-149"></a></span>
+<span id="cb36-150"><a href="#cb36-150"></a></span>
+<span id="cb36-151"><a href="#cb36-151"></a>If we are instead interested in the probabilities for individual classes, we can set <span class="in">`type = "prob"`</span> and provide 4 column names (one for each class) as <span class="in">`output_names`</span> argument.  </span>
+<span id="cb36-152"><a href="#cb36-152"></a></span>
+<span id="cb36-153"><a href="#cb36-153"></a></span>
+<span id="cb36-154"><a href="#cb36-154"></a><span class="in">```{r predict_tidymodels_classprobs}</span></span>
+<span id="cb36-155"><a href="#cb36-155"></a>out_names <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">".pred_"</span>,<span class="fu">levels</span>(x<span class="sc">$</span>class))</span>
+<span id="cb36-156"><a href="#cb36-156"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb36-157"><a href="#cb36-157"></a>  <span class="fu">predict</span>(rf_model_fitted, <span class="at">output_names=</span>out_names, <span class="at">type=</span><span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-158"><a href="#cb36-158"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis)</span>
+<span id="cb36-159"><a href="#cb36-159"></a><span class="in">```</span></span>
+<span id="cb36-160"><a href="#cb36-160"></a></span>
+<span id="cb36-161"><a href="#cb36-161"></a></span>
+<span id="cb36-162"><a href="#cb36-162"></a></span>
+<span id="cb36-163"><a href="#cb36-163"></a><span class="fu">## Predict again, but now with `caret`</span></span>
+<span id="cb36-164"><a href="#cb36-164"></a></span>
+<span id="cb36-165"><a href="#cb36-165"></a>The <span class="in">`caret`</span> package is another widely-used framework for applying machine learning model. The script below</span>
+<span id="cb36-166"><a href="#cb36-166"></a>shows how to train a model and calculate predictions for all pixels similar to the previous example.</span>
+<span id="cb36-167"><a href="#cb36-167"></a>Notice that in contrast to <span class="in">`tidymodels`</span>, the predict method from <span class="in">`caret`</span> here returns a simple vector of predictions.</span>
+<span id="cb36-168"><a href="#cb36-168"></a></span>
+<span id="cb36-169"><a href="#cb36-169"></a></span>
+<span id="cb36-170"><a href="#cb36-170"></a><span class="in">```{r caret}</span></span>
+<span id="cb36-171"><a href="#cb36-171"></a><span class="fu">library</span>(caret)</span>
+<span id="cb36-172"><a href="#cb36-172"></a></span>
+<span id="cb36-173"><a href="#cb36-173"></a>samples <span class="ot">=</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> x<span class="sc">$</span>class, <span class="at">p =</span> .<span class="dv">75</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb36-174"><a href="#cb36-174"></a>training <span class="ot">=</span> x[samples,]</span>
+<span id="cb36-175"><a href="#cb36-175"></a>testing <span class="ot">=</span> x[<span class="sc">-</span>samples,] </span>
+<span id="cb36-176"><a href="#cb36-176"></a><span class="fu">head</span>(training)</span>
+<span id="cb36-177"><a href="#cb36-177"></a></span>
+<span id="cb36-178"><a href="#cb36-178"></a>tc <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>,<span class="at">number =</span> <span class="dv">5</span>)</span>
+<span id="cb36-179"><a href="#cb36-179"></a>m <span class="ot">=</span> <span class="fu">train</span>(class <span class="sc">~</span> B02 <span class="sc">+</span> B03 <span class="sc">+</span> B04 <span class="sc">+</span> B08 <span class="sc">+</span> NDVI, <span class="at">data =</span> training, <span class="at">method =</span> <span class="st">"rf"</span>, <span class="at">trControl =</span> tc)</span>
+<span id="cb36-180"><a href="#cb36-180"></a>m</span>
+<span id="cb36-181"><a href="#cb36-181"></a></span>
+<span id="cb36-182"><a href="#cb36-182"></a><span class="fu">ncdf_cube</span>(ncfile) <span class="sc">|&gt;</span></span>
+<span id="cb36-183"><a href="#cb36-183"></a>  <span class="fu">predict</span>(m) <span class="sc">|&gt;</span></span>
+<span id="cb36-184"><a href="#cb36-184"></a>  <span class="fu">plot</span>(<span class="at">key.pos =</span> <span class="dv">1</span>, <span class="at">col=</span>viridis<span class="sc">::</span>cividis, <span class="at">nbreaks=</span><span class="dv">4</span>)</span>
+<span id="cb36-185"><a href="#cb36-185"></a><span class="in">```</span></span>
+<span id="cb36-186"><a href="#cb36-186"></a></span>
+<span id="cb36-187"><a href="#cb36-187"></a></span>
+<span id="cb36-188"><a href="#cb36-188"></a></span>
+<span id="cb36-189"><a href="#cb36-189"></a></span>
+<span id="cb36-190"><a href="#cb36-190"></a></span>
+<span id="cb36-191"><a href="#cb36-191"></a></span>
+<span id="cb36-192"><a href="#cb36-192"></a><span class="fu">## More complex cases</span></span>
+<span id="cb36-193"><a href="#cb36-193"></a></span>
+<span id="cb36-194"><a href="#cb36-194"></a>The <span class="in">`predict`</span> method in gdalcubes has been designed to work with most common model types (e.g. from <span class="in">`tidymodels`</span>, <span class="in">`caret`</span>, as well as simple <span class="in">`lm`</span> or <span class="in">`glm`</span> models). However, there might be cases, where it is not possible to use it e.g., when model-specific <span class="in">`predict`</span> method return more complex nested structures, like a list of matrices. As an alternative approach (with different pitfalls), it is possible to convert a complete data cube to a <span class="in">`data.frame`</span> using <span class="in">`as.data.frame()`</span> and directly apply the model-specific predict method on it. This, however, may only work for smaller data cubes and requires some additional effort to convert the prediction results to images / data cubes.</span>
+<span id="cb36-195"><a href="#cb36-195"></a></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
@@ -1085,7 +1270,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
- Generated on 2024-03-04, based on gdalcubes v0.7.0. All content © 2024 Marius Appel.
+ Generated on 2026-10-29, based on gdalcubes v0.7.6. All content © 2026 Marius Appel.
   </li>  
 </ul>
 </div>
