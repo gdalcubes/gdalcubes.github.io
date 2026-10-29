@@ -51,7 +51,7 @@ website:
         href: https://github.com/appelmar/gdalcubes_R
   page-footer:
     center: 
-      - text: "Generated on {{< var BUILD_DATE >}}, based on gdalcubes v{{< var GDALCUBES_VERSION >}}. All content © 2024 Marius Appel."
+      - text: "Generated on {{< var BUILD_DATE >}}, based on gdalcubes v{{< var GDALCUBES_VERSION >}}. All content © 2026 Marius Appel."
         #href: about.qmd
       
   sidebar:
@@ -227,7 +227,7 @@ format:
       comment: "##"
       #cache: true
       fig-align: "center"
-      freeze: auto
+      freeze: auto # default: auto
       #echo: true
       #eval: false
     

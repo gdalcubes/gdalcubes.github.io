@@ -27,3 +27,42 @@ See Appel and Pebesma (2019) <doi:10.3390/data4030092> for further details.
 ```
 
 
+## See Also
+
+Useful links:
+
+   [https://github.com/appelmar/gdalcubes](https://github.com/appelmar/gdalcubes)
+   Report bugs at [https://github.com/appelmar/gdalcubes/issues/](https://github.com/appelmar/gdalcubes/issues/)
+
+
+
+
+## Author(s)
+
+**Maintainer**: Marius Appel marius.appel@hs-bochum.de ([ORCID](https://orcid.org/0000-0001-5281-3896))
+
+Authors:
+
+   Marius Appel marius.appel@hs-bochum.de ([ORCID](https://orcid.org/0000-0001-5281-3896))
+
+
+Other contributors:
+
+   Edzer Pebesma ([ORCID](https://orcid.org/0000-0001-8049-7069)) [contributor]
+   Roger Bivand [contributor]
+   Rolf Simoes rolf.simoes@gmail.com [contributor]
+   Felipe Carlos efelipecarlos@gmail.com [contributor]
+   Felipe Souza lipecaso@gmail.com [contributor]
+   Jeroen Ooms ([ORCID](https://orcid.org/0000-0002-4035-0289)) [contributor]
+   Lewis Van Winkle [copyright holder]
+   Ole Christian Eidheim [copyright holder]
+   Howard Hinnant [copyright holder]
+   Adrian Colomitchi [copyright holder]
+   Florian Dang [copyright holder]
+   Paul Thompson [copyright holder]
+   Tomasz Kamiński [copyright holder]
+   Dropbox, Inc. [copyright holder]
+
+
+
+

@@ -33,7 +33,7 @@ gdalcubes_set_gdal_config(key, value)
 ## Details
 
 Details and a list of possible options can be found at 
-[https://gdal.org/user/configoptions.html](https://gdal.org/user/configoptions.html).
+[https://gdal.org/en/stable/user/configoptions.html](https://gdal.org/en/stable/user/configoptions.html).
 
 
 ## Examples

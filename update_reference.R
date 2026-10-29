@@ -91,8 +91,10 @@ flatten_rd <- function(r) {
     }
     else {
       out = ""
-      for (i in 1:length(r)) {
-        out = paste0(out, flatten_rd(r[[i]]))
+      if (length(r) > 0) {
+        for (i in 1:length(r)) {
+          out = paste0(out, flatten_rd(r[[i]]))
+        }
       }
       return(out)
     }

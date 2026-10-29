@@ -51,7 +51,7 @@ cube_view(
 | dy | size of pixels in y-direction (latitude / northing) |
 | dt | size of pixels in time-direction, expressed as ISO8601 period string (only 1 number and unit is allowed) such as "P16D" |
 | aggregation | aggregation method as string, defining how to deal with pixels containing data from multiple images, can be "min", "max", "mean", "median", or "first" |
-| resampling | resampling method used in gdalwarp when images are read, can be "near", "bilinear", "bicubic" or others as supported by gdalwarp (see [https://gdal.org/programs/gdalwarp.html](https://gdal.org/programs/gdalwarp.html)) |
+| resampling | resampling method used in gdalwarp when images are read, can be "near", "bilinear", "bicubic" or others as supported by gdalwarp (see [https://gdal.org/en/stable/programs/gdalwarp.html](https://gdal.org/en/stable/programs/gdalwarp.html)) |
 | keep.asp | if TRUE, derive ny or dy automatically from nx or dx (or vice versa) based on the aspect ratio of the spatial extent |
 
 

@@ -6,9 +6,6 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/appelmar
     - icon: github
       text: GitHub
       href: https://github.com/appelmar
@@ -28,6 +25,6 @@ The gdalcubes project is maintained and developed by Marius Appel.
 | Germany
 | 
 | Mail: marius.appel@hs-bochum.de
-| Phone: +49 (0)234 32 10520
+| Phone: +49 (0)234 36186 9539
 | 
 | ORCID ID: [0000-0001-5281-3896](http://orcid.org/0000-0001-5281-3896)
